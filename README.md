@@ -23,8 +23,7 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is an approach of Clean Architecture using [Nest](https://github.com/nestjs/nest) framework.
 
 ## Installation
 
@@ -45,6 +44,19 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## TypeORM Migrations
+
+```bash
+# Generate migrations based on the entities of the project.
+$ npm run migrations:generate
+
+# Run all the migrations generated before
+$ npm run migrations:run
+
+# Make a rollback of the previous migration
+$ npm run migrations:revert
+```
+
 ## Test
 
 ```bash
@@ -56,6 +68,16 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+
+## Docker & Docker Compose
+
+```bash
+# Run a docker container for PostgreSQL
+$ docker-compose up -d
+
+# Stop the PostgreSQL cotainer and delete the volumes attached
+$ docker-compose down -v
 ```
 
 ## Support
